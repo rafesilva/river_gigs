@@ -1,0 +1,9 @@
+<h2>Profile</h2>
+
+<%= form_for employee do |f| %>    
+<%= f.text_field :first_name %>
+<%= f.text_field :email %>
+<%= f.submit "Create" %>
+<%= f.file_field :image %>
+
+<% end %>

@@ -1,0 +1,137 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: inline-block;
+}
+
+body {
+
+background-image: url('river_background.png');
+background-repeat: repeat, repeat;
+background-position: 50% -45%; 
+background-color:rgb(51, 124, 172);
+}
+
+
+div.box {
+
+    background-color: white;
+    width: 75%;
+    border: 0.1px solid white;
+    margin: 21.5% 12.5%;
+    opacity: 0.95;
+    animation: shake 20s 10s forwards infinite;
+}
+
+div.box {
+    box-shadow: 10px 10px 25px black;
+}
+
+@keyframes shake {
+
+    1% {transform: scale(1, 1)}
+    2%{transform: scale(1.05, 1.05)}
+    3%{transform: rotateZ(2deg)scale(1.05, 1.05)}
+    4%{transform: rotateZ(-2deg)scale(1.05, 1.05)}
+    5% {transform: rotateZ(0deg)scale(1, 1)}
+    100% {transform: rotateZ(0deg)scale(1, 1)}
+}
+
+form {
+ 
+    background-color: white;
+    width: 98%;
+    border: 0.5px solid gray;
+    margin: 1% 1%;
+    opacity: 1;
+}
+
+input[type=text] {
+    
+    width: 90%;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('search_ban.png');
+   
+    background-repeat: no-repeat;
+    margin: 5%;
+    padding: 12px 20px 12px 40px;
+}
+
+img.logo {
+    position: absolute;
+    top:6%;
+    right:45%;
+    border: 0.25px solid black;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+img.logo_mask {
+    position: absolute;
+    top:6%;
+    right:45%;
+    border: 0.25px solid black;
+    opacity: 0.98;
+    z-index: 1;
+}
+
+.navbar-text {
+text-align: center;
+background: white;
+width: 20%;
+height: 20%;
+
+opacity: 0.8;
+
+}
+
+.pull-right {
+
+position: absolute;
+right: 2.5%;
+
+}
+
+.box_cred {
+
+    display: inline;
+    position: fixed;
+    text-align: center;
+    top: -18%;
+    right: -10%;
+    background-color: white;
+    width: 20%;
+    height: 30%;
+   
+    border: 0.1px solid white;
+    margin: 14.5% 12.5%;
+    opacity: 0.90;
+
+    }
+
+.active {
+
+text-align: center;
+background: white;
+width: 10%;
+opacity: 0.95;
+position: absolute;
+top:2.5%;
+left: 2.5%;
+
+    }
+
+    .position {
+
+        position: absolute;
+        top: 37%;
+        right:5%;
+    }
+ 

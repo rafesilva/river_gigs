@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>River Gigs</title>
+    <%= csrf_meta_tags %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+  <img class="logo" src="assets/river_logo.png">
+
+  <img class="logo_mask" src="assets/river_logo_wb.png">
+ 
+
+<p class="navbar-text pull-right">
+
+<% if user_signed_in? %>
+     Logged in as <strong><%= current_user.email %></strong>.
+<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+
+</p>
+
+<% end %>
+
+
+  <ul class="nav">
+  <li class="active"><a href="/users/new">New</a>&nbsp&nbsp
+  <a href="/users/">Home</a></li>
+
+  </ul>
+
+  <div class="box">
+  <form>
+    <input type="text" name="search" placeholder="Find new your Gig here!">
+  </form>
+  </div>
+
+    <%= yield %>
+
+<% if notice %>
+  <p class="position alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="position alert alert-danger"><%= alert %></p>
+<% end %>
+ 
+  </body>
+</html>
